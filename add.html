@@ -3,6 +3,12 @@
 
 <head>
     <style>
+
+        #sbutton {
+            width: 1320px;
+            height: 70px;
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -76,6 +82,54 @@
         function submit() {
             alert("인원 정보가 추가되었습니다.");
         }
+
+        function checkValue() {
+            // alert("test");
+            var inname = document.form1.fname.value;
+            var ingender = document.form1.gender.value;
+            var inbirth = document.form1.birth.value;
+            var inphone = document.form1.pnum.value;
+            var inemail = document.form1.email.value;
+            var incountry = document.form1.country.value;
+            var inmbti = document.form1.mbti1.value;
+            var inmbti = document.form1.mbti2.value;
+            var inmbti = document.form1.mbti3.value;
+            var inmbti = document.form1.mbti4.value;
+
+            if (inname.value == '') {
+                alert ("이름을 입력하세요.");
+                inname.focus(); //커서를 넣어줌
+                return;
+            }
+            if (ingender.value == '') {
+                alert ("성별을 선택하세요.");
+                return;
+            }
+            if (inbirth.value == '') {
+                alert ("생일을 입력하세요.");
+                return;
+            }
+            if (inphone.value == '') {
+                alert ("전화번호를 입력하세요.");
+                inphone.focus();
+                return;
+            }
+            if (inemail.value == '') {
+                alert ("이메일을 입력하세요.");
+                inemail.focus();
+                return;
+            }
+            if (incountry.value == '') {
+                alert ("국가를 선택하세요.");
+                return;
+            }
+            if (inmbti.value == '') {
+                alert ("MBTI를 선택하세요.");
+                return;
+            }
+
+            // document.form1.submit();
+        }
     </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -120,26 +174,34 @@
     <h2 style="padding-left: 180px;">Responsive Form</h2>
     <p style="padding-left: 180px;">Resize the browser window to see the effect. When the screen is less than 600px
         wide, make the two columns stack
-        on top of each other instead of next to each other.</p>
+        on top of each other instead of next to each other.</p><br>
 
     <div class="container">
         <form name="form1" method="post" action="form_ok.php">
 
             <div class="row">
                 <div class="col-25">
-                    <label for="fname">Name</label>
+                    <label for="fname" style="font-weight: bold;">Name</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="fname" name="fname" placeholder="Your name..">
                 </div>
             </div><br>
 
             <div>
+                <label for="gender" style="font-weight: bold;">Gender     </label>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" id="male" name="gender">
+                <label for="midhigh">Male</label><br>
+            </div><br>
+
+            <div>
                 <div>
-                    <label for="birth">Birth date</label>
+                    <label for="birth" style="font-weight: bold;">Birth date</label>
                 </div>
                 <div>
-                    <input type="date">
+                    <input type="date" name="birth">
                 </div>
             </div><br>
 
@@ -149,25 +211,25 @@
 
             <div>
                 <div>
-                    <lable>Phone number</lable>
+                    <lable for="phone" style="font-weight: bold;">Phone number</lable>
                 </div>
                 <div>
-                    <input type="text" size="3"> - <input type="text" size="4"> - <input type="text" size="5">
+                    <input type="text" size="3" name="pnum"> - <input type="text" size="4" name="pnum"> - <input type="text" size="5" name="pnum">
                 </div>
             </div><br>
 
             <div>
                 <div>
-                    <label>E-mail</label>
+                    <label for="email" style="font-weight: bold;">E-mail</label>
                 </div>
                 <div>
-                    <input type="text" size="15"> @ <input type="text" size="15">
+                    <input type="text" size="15" name="email"> @ <input type="text" size="15" name="email">
                 </div>
             </div><br>
 
             <div class="row">
                 <div class="col-25">
-                    <label for="country">Country</label>
+                    <label for="country" style="font-weight: bold;">Country</label>
                 </div>
                 <div class="col-75">
                     <select id="country" name="country">
@@ -185,7 +247,7 @@
 
             <div>
                 <div>
-                    <label>MBTI</label>
+                    <label for="mbti" style="font-weight: bold;">MBTI</label>
                 </div>
                 <div>
                     <select name="mbti1" id="mbti1">
@@ -213,8 +275,8 @@
 
 
             <br>
-            <div class="row">
-                <input type="button" value="Submit" onclick="submit()">
+            <div id="sbutton">
+                <input type="button" value="Submit" onclick="checkValue()">
             </div>
         </form>
     </div>
