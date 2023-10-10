@@ -88,46 +88,65 @@
             var inname = document.form1.fname.value;
             var ingender = document.form1.gender.value;
             var inbirth = document.form1.birth.value;
-            var inphone = document.form1.pnum.value;
-            var inemail = document.form1.email.value;
-            var incountry = document.form1.country.value;
+            var inphone1 = document.form1.pnum1.value;
+            var inphone2 = document.form1.pnum2.value;
+            var inphone3 = document.form1.pnum3.value;
+            var inemail1 = document.form1.email1.value;
+            var inemail2 = document.form1.email2.value;
+            var incountry = document.getElementById('country');
             var inmbti = document.form1.mbti1.value;
             var inmbti = document.form1.mbti2.value;
             var inmbti = document.form1.mbti3.value;
             var inmbti = document.form1.mbti4.value;
 
-            if (inname.value == '') {
+            if (inname == '') {
                 alert ("이름을 입력하세요.");
-                inname.focus(); //커서를 넣어줌
+                document.form1.inname.focus(); //커서를 넣어줌
                 return;
             }
-            if (ingender.value == '') {
+            if (ingender == '') {
                 alert ("성별을 선택하세요.");
                 return;
             }
-            if (inbirth.value == '') {
+            if (inbirth == '') {
                 alert ("생일을 입력하세요.");
                 return;
             }
-            if (inphone.value == '') {
+            if (inphone1 == '') {
                 alert ("전화번호를 입력하세요.");
-                inphone.focus();
+                document.form1.inphone1.focus();
                 return;
             }
-            if (inemail.value == '') {
+            if (inphone2 == '') {
+                alert ("전화번호를 올바르게 입력하세요.");
+                document.form1.inphone2.focus();
+                return;
+            }
+            if (inphone3 == '') {
+                alert ("전화번호를 올바르게 입력하세요.");
+                document.form1.inphone3.focus();
+                return;
+            }
+            if (inemail1 == '') {
                 alert ("이메일을 입력하세요.");
-                inemail.focus();
+                document.form1.inemail1.focus();
                 return;
             }
-            if (incountry.value == '') {
+            if (inemail2 == '') {
+                alert ("이메일 주소를 정확하게 입력하세요.");
+                document.form1.inemail2.focus();
+                return;
+            }
+            if (incountry.option[incountry.selectedIndex].text == 'Select Your Country') {
                 alert ("국가를 선택하세요.");
                 return;
-            }
-            if (inmbti.value == '') {
+            } else alert("country");
+            if (inmbti == 'Attentional Focus') {
                 alert ("MBTI를 선택하세요.");
                 return;
             }
 
+            alert("새 정보가 추가되었습니다.");
             // document.form1.submit();
         }
     </script>
@@ -177,6 +196,7 @@
         on top of each other instead of next to each other.</p><br>
 
     <div class="container">
+
         <form name="form1" method="post" action="form_ok.php">
 
             <div class="row">
@@ -214,7 +234,7 @@
                     <lable for="phone" style="font-weight: bold;">Phone number</lable>
                 </div>
                 <div>
-                    <input type="text" size="3" name="pnum"> - <input type="text" size="4" name="pnum"> - <input type="text" size="5" name="pnum">
+                    <input type="text" size="3" name="pnum1"> - <input type="text" size="4" name="pnum2"> - <input type="text" size="5" name="pnum3">
                 </div>
             </div><br>
 
@@ -223,7 +243,7 @@
                     <label for="email" style="font-weight: bold;">E-mail</label>
                 </div>
                 <div>
-                    <input type="text" size="15" name="email"> @ <input type="text" size="15" name="email">
+                    <input type="text" size="15" name="email1"> @ <input type="text" size="15" name="email2">
                 </div>
             </div><br>
 
@@ -233,7 +253,7 @@
                 </div>
                 <div class="col-75">
                     <select id="country" name="country">
-                        <option value="select">Select Your Contry</option>
+                        <option value="select">Select Your Country</option>
                         <option value="korea">Korea</option>
                         <option value="france">France</option>
                         <option value="a=ustralia">Australia</option>
@@ -276,7 +296,7 @@
 
             <br>
             <div id="sbutton">
-                <input type="button" value="Submit" onclick="checkValue()">
+                <input type="button" value="Submit" onclick="checkValue();">
             </div>
         </form>
     </div>
