@@ -174,12 +174,7 @@ button {
     </style>
 
     <script>
-        function submit() {
-            alert("인원 정보가 추가되었습니다.");
-        }
-
-        function checkValue() {
-            // alert("test");
+        function subEdit() {
             var inname = document.form1.fname.value;
             var ingender = document.form1.gender.value;
             var inbirth = document.form1.birth.value;
@@ -195,54 +190,48 @@ button {
             var inmbti = document.form1.mbti4.value;
 
             if (inname == '') {
-                alert ("이름을 입력하세요.");
-                document.form1.inname.focus(); //커서를 넣어줌
+                alert("이름을 입력하세요.");
+                document.getElementById('fname').focus();
                 return;
             }
             if (ingender == '') {
-                alert ("성별을 선택하세요.");
+                alert("성별을 선택하세요.");
                 return;
             }
             if (inbirth == '') {
-                alert ("생일을 입력하세요.");
+                alert("생일을 입력하세요.");
                 return;
             }
             if (inphone1 == '') {
-                alert ("전화번호를 입력하세요.");
-                document.form1.inphone1.focus();
+                alert("전화번호를 입력하세요.");
+                document.getElementById('pnum1').focus();
                 return;
             }
             if (inphone2 == '') {
-                alert ("전화번호를 올바르게 입력하세요.");
-                document.form1.inphone2.focus();
+                alert("전화번호를 올바르게 입력하세요.");
+                document.getElementById('pnum2').focus();
                 return;
             }
             if (inphone3 == '') {
-                alert ("전화번호를 올바르게 입력하세요.");
-                document.form1.inphone3.focus();
+                alert("전화번호를 올바르게 입력하세요.");
+                document.getElementById('pnum3').focus();
                 return;
             }
             if (inemail1 == '') {
-                alert ("이메일을 입력하세요.");
-                document.form1.inemail1.focus();
+                alert("이메일을 입력하세요.");
+                document.getElementById('email1').focus();
                 return;
             }
             if (inemail2 == '') {
-                alert ("이메일 주소를 정확하게 입력하세요.");
-                document.form1.inemail2.focus();
+                alert("이메일 주소를 정확하게 입력하세요.");
+                document.getElementById('email2').focus();
                 return;
             }
-            // if (incountry.option[incountry.selectedIndex].text == 'Select Your Country') {
-            //     alert ("국가를 선택하세요.");
-            //     return;
-            // } else alert("country");
-            // if (inmbti == 'Attentional Focus') {
-            //     alert ("MBTI를 선택하세요.");
-            //     return;
-            // }
 
-            alert("새 정보가 추가되었습니다.");
+            alert("정보를 수정하였습니다.");
             // document.form1.submit();
+
+            location.href = 'list.html';
         }
     </script>
 
@@ -283,23 +272,38 @@ button {
                 <li class="nav-item"><a href="#" onclick="location.href = 'add.html'" class="nav-link">Add</a></li>
             </ul>
         </header>
-    </div>
+    </div><br>
 
     <h2 style="padding-left: 180px;">Edit Information</h2>
     <p style="padding-left: 180px;">Please enter the information according to the requirements below and edit information.</p><br>
 
     <div class="container">
 
-        <form name="form1" method="post" action="form_ok.php">
+        <form name="form1" method="post">
 
             <div class="row">
                 <div class="col-25">
                     <label for="fname" style="font-weight: bold;">Name</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="fname" name="fname" placeholder="이은샘">
+                    <input type="text" id="fname" name="fname" value="이은샘">
                 </div>
             </div><br>
+
+            <br><br>
+            <div>
+                <label for="profile" style="font-weight: bold;">Choose your profile image</label>
+                <div>
+                    <input type="radio" id="image1" name="profile">
+                    <label for="image1"><img src="IMG_919712.jpg" width="150"></label>
+                    <input type="radio" id="image2" name="profile" checked="checked">
+                    <label for="image2"><img src="IMG_9194.jpg" width="150"></label>
+                    <input type="radio" id="image3" name="profile">
+                    <label for="image3"><img src="IMG_91971.jpg" width="150"></label>
+                    <input type="radio" id="image4" name="profile">
+                    <label for="image4"><img src="IMG_919733.jpg" width="150"></label>
+                </div>
+            </div><br><br><br>
 
             <div>
                 <label for="gender" style="font-weight: bold;">Gender     </label>
@@ -307,7 +311,7 @@ button {
                 <label for="female">Female</label>
                 <input type="radio" id="male" name="gender">
                 <label for="midhigh">Male</label><br>
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
@@ -316,29 +320,25 @@ button {
                 <div>
                     <input type="date" name="birth" value='2003-03-08'>
                 </div>
-            </div><br>
-
-            <div>
-                upload imeage
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
                     <lable for="phone" style="font-weight: bold;">Phone number</lable>
                 </div>
                 <div>
-                    <input type="text" size="3" name="pnum1" placeholder="010"> - <input type="text" size="4" name="pnum2" placeholder="1357"> - <input type="text" size="5" name="pnum3" placeholder="2468">
+                    <input type="text" size="3" name="pnum1" value="010"> - <input type="text" size="4" name="pnum2" value="1357"> - <input type="text" size="5" name="pnum3" value="2468">
                 </div>
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
                     <label for="email" style="font-weight: bold;">E-mail</label>
                 </div>
                 <div>
-                    <input type="text" size="15" name="email1" placeholder="eunsaem38"> @ <input type="text" size="15" name="email2" placeholder="handong.ac.kr">
+                    <input type="text" size="15" name="email1" value="eunsaem38"> @ <input type="text" size="15" name="email2" value="handong.ac.kr">
                 </div>
-            </div><br>
+            </div><br><br>
 
             <div class="row">
                 <div class="col-25">
@@ -356,7 +356,7 @@ button {
                         <option value="morocco">Morocco</option>
                     </select>
                 </div>
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
@@ -384,12 +384,12 @@ button {
                         <option value="j" selected>J</option>
                     </select>
                 </div>
-            </div><br>
+            </div><br><br>
 
 
             <br><br><br><br>
             <div 버튼>
-                <button class="custom-btn btn-3"><span>Edit</span></button><br>
+                <button class="custom-btn btn-3" tyep="button" onclick="subEdit();">Edit</button><br>
             </div><br><br>
         </form>
     </div>
