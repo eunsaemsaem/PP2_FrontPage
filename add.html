@@ -3,8 +3,7 @@
 
 <head>
     <style>
-
-button {
+        button {
             margin-left: 760px;
             padding-left: 200px;
         }
@@ -191,40 +190,40 @@ button {
             var inmbti = document.form1.mbti4.value;
 
             if (inname == '') {
-                alert ("이름을 입력하세요.");
+                alert("이름을 입력하세요.");
                 document.getElementById('fname').focus();
                 return;
             }
             if (ingender == '') {
-                alert ("성별을 선택하세요.");
+                alert("성별을 선택하세요.");
                 return;
             }
             if (inbirth == '') {
-                alert ("생일을 입력하세요.");
+                alert("생일을 입력하세요.");
                 return;
             }
             if (inphone1 == '') {
-                alert ("전화번호를 입력하세요.");
+                alert("전화번호를 입력하세요.");
                 document.getElementById('pnum1').focus();
                 return;
             }
             if (inphone2 == '') {
-                alert ("전화번호를 올바르게 입력하세요.");
+                alert("전화번호를 올바르게 입력하세요.");
                 document.getElementById('pnum2').focus();
                 return;
             }
             if (inphone3 == '') {
-                alert ("전화번호를 올바르게 입력하세요.");
+                alert("전화번호를 올바르게 입력하세요.");
                 document.getElementById('pnum3').focus();
                 return;
             }
             if (inemail1 == '') {
-                alert ("이메일을 입력하세요.");
+                alert("이메일을 입력하세요.");
                 document.getElementById('email1').focus();
                 return;
             }
             if (inemail2 == '') {
-                alert ("이메일 주소를 정확하게 입력하세요.");
+                alert("이메일 주소를 정확하게 입력하세요.");
                 document.getElementById('email2').focus();
                 return;
             }
@@ -282,7 +281,8 @@ button {
     </div>
 
     <h2 style="padding-left: 180px;">Add New Information</h2>
-    <p style="padding-left: 180px;">Please enter the information according to the requirements below and add new information.</p><br>
+    <p style="padding-left: 180px;">Please enter the information according to the requirements below and add new
+        information.</p><br>
 
     <div class="container">
 
@@ -297,13 +297,33 @@ button {
                 </div>
             </div><br>
 
+            <br><br>
             <div>
-                <label for="gender" style="font-weight: bold;">Gender     </label>
+                <label for="profile" style="font-weight: bold;">Choose your profile image</label>
+                <div>
+                    <input type="radio" id="image1" name="profile">
+                    <label for="image1"><img src="IMG_919712.jpg" width="150"></label>
+                    <input type="radio" id="image2" name="profile">
+                    <label for="image2"><img src="IMG_9194.jpg" width="150"></label>
+                    <input type="radio" id="image3" name="profile">
+                    <label for="image3"><img src="IMG_91971.jpg" width="150"></label>
+                    <input type="radio" id="image4" name="profile">
+                    <label for="image4"><img src="IMG_919733.jpg" width="150"></label>
+                </div>
+                <!-- <div>
+                    <label for="profile" style="font-weight: bold;">Upload your profile image 
+                        <input type="file" id="profile" accept="image/png, image/jpeg">
+                    </label>
+                </div> -->
+            </div><br><br><br>
+
+            <div>
+                <label for="gender" style="font-weight: bold;">Gender </label>
                 <input type="radio" id="female" name="gender">
                 <label for="female">Female</label>
                 <input type="radio" id="male" name="gender">
                 <label for="midhigh">Male</label><br>
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
@@ -312,20 +332,17 @@ button {
                 <div>
                     <input type="date" name="birth">
                 </div>
-            </div><br>
-
-            <div>
-                upload imeage
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
                     <lable for="phone" style="font-weight: bold;">Phone number</lable>
                 </div>
                 <div>
-                    <input type="text" size="3" name="pnum1"> - <input type="text" size="4" name="pnum2"> - <input type="text" size="5" name="pnum3">
+                    <input type="text" size="3" name="pnum1"> - <input type="text" size="4" name="pnum2"> - <input
+                        type="text" size="5" name="pnum3">
                 </div>
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
@@ -334,7 +351,7 @@ button {
                 <div>
                     <input type="text" size="15" name="email1"> @ <input type="text" size="15" name="email2">
                 </div>
-            </div><br>
+            </div><br><br>
 
             <div class="row">
                 <div class="col-25">
@@ -352,7 +369,7 @@ button {
                         <option value="morocco">Morocco</option>
                     </select>
                 </div>
-            </div><br>
+            </div><br><br>
 
             <div>
                 <div>
@@ -380,7 +397,7 @@ button {
                         <option value="j">J</option>
                     </select>
                 </div>
-            </div><br>
+            </div><br><br>
 
 
             <br><br><br><br>
