@@ -174,9 +174,6 @@ button {
     </style>
 
     <script>
-        function submit() {
-            alert("인원 정보가 추가되었습니다.");
-        }
 
         function checkValue() {
             var inname = document.form1.fname.value;
@@ -195,7 +192,7 @@ button {
 
             if (inname == '') {
                 alert ("이름을 입력하세요.");
-                document.form1.inname.focus(); //커서를 넣어줌
+                document.getElementById('fname').focus();
                 return;
             }
             if (ingender == '') {
@@ -208,27 +205,27 @@ button {
             }
             if (inphone1 == '') {
                 alert ("전화번호를 입력하세요.");
-                document.form1.inphone1.focus();
+                document.getElementById('pnum1').focus();
                 return;
             }
             if (inphone2 == '') {
                 alert ("전화번호를 올바르게 입력하세요.");
-                document.form1.inphone2.focus();
+                document.getElementById('pnum2').focus();
                 return;
             }
             if (inphone3 == '') {
                 alert ("전화번호를 올바르게 입력하세요.");
-                document.form1.inphone3.focus();
+                document.getElementById('pnum3').focus();
                 return;
             }
             if (inemail1 == '') {
                 alert ("이메일을 입력하세요.");
-                document.form1.inemail1.focus();
+                document.getElementById('email1').focus();
                 return;
             }
             if (inemail2 == '') {
                 alert ("이메일 주소를 정확하게 입력하세요.");
-                document.form1.inemail2.focus();
+                document.getElementById('email2').focus();
                 return;
             }
             // if (incountry.option[incountry.selectedIndex].text == 'Select Your Country') {
@@ -289,7 +286,7 @@ button {
 
     <div class="container">
 
-        <form name="form1" method="post" action="form_ok.php">
+        <form name="form1" method="post">
 
             <div class="row">
                 <div class="col-25">
@@ -388,7 +385,7 @@ button {
 
             <br><br><br><br>
             <div 버튼>
-                <button class="custom-btn btn-3" onclick="checkValue();">Submit</button><br>
+                <button class="custom-btn btn-3" type="button" onclick="checkValue();">Submit</button><br>
             </div><br><br>
         </form>
     </div>
