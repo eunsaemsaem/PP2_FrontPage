@@ -19,6 +19,117 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
+
+    <style>
+        button {
+            margin-left: 760px;
+            padding-left:200px;
+        }
+
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+        }
+
+        /* 3 */
+        .btn-3 {
+            background: rgb(0, 172, 238);
+            background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+
+        }
+
+        .btn-3 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-3:before,
+        .btn-3:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            background: rgba(2, 126, 251, 1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-3:before {
+            height: 0%;
+            width: 2px;
+        }
+
+        .btn-3:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-3:hover {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .btn-3:hover:before {
+            height: 100%;
+        }
+
+        .btn-3:hover:after {
+            width: 100%;
+        }
+
+        .btn-3 span:hover {
+            color: rgba(2, 126, 251, 1);
+        }
+
+        .btn-3 span:before,
+        .btn-3 span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            background: rgba(2, 126, 251, 1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-3 span:before {
+            width: 2px;
+            height: 0%;
+        }
+
+        .btn-3 span:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-3 span:hover:before {
+            height: 100%;
+        }
+
+        .btn-3 span:hover:after {
+            width: 100%;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -39,7 +150,8 @@
                     <input type="search" class="form-control form-control-dark" placeholder="Search..."
                         aria-label="Search">
                 </form>
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page" onclick="location.href = 'list.html';">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"
+                        onclick="location.href = 'list.html';">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link" onclick="location.href='add.html';">Add</a></li>
             </ul>
         </header>
@@ -48,6 +160,8 @@
     <h1 style="padding-left:200px;">view</h1>
 
     <hr class="featurette-divider"><br>
+
+    
 
     <div style="padding-left:600px;">
         <div class="col-md-5 order-md-1" style="text-align: center;">
@@ -59,8 +173,9 @@
             </svg>
 
         </div><br>
+
         <div class="col-md-7 order-md-2">
-            <h2 style="padding-left: 190px;">이은샘</span>
+            <h2 style="margin:auto;">이은샘</span>
             </h2><br><br>
             <p>Gender : Female</p><br>
             <p>Birth Date : 2003.03.08</p><br>
@@ -69,7 +184,22 @@
             <p>Address : 포항 북구 흥해읍 한동대학교</p><br>
             <p>MBTI : ISFJ</p><br>
         </div>
-    </div>
+    </div><br>
+
+
+    
+
+    <div 버튼>
+
+        <button class="custom-btn btn-3" onclick="location.href = 'edit.html'"><span>Edit</span></button><br>
+
+    </div><br><br>
+
+
+    <!-- <br>
+    <button onclick="location.href = 'edit.html'">edit</button>
+    <a class="btn-gradient red small">edit</a> -->
+
 
 
 </body>
