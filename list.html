@@ -41,9 +41,57 @@
             }
         }
 
-        /* .col-lg-4{
-            padding: 100px;
-        } */
+        body {
+            padding-bottom: 100px;
+            /* 푸터의 높이만큼 간격을 주어 겹치지 않도록 조절 */
+        }
+
+        .parent {
+            display: flex;
+        }
+
+        .child {
+            flex: 1;
+        }
+
+        /* 푸터를 페이지 하단에 위치시키기 위한 CSS 추가 */
+        .container {
+            flex: 1;
+        }
+
+        /* 이 템플릿을 위한 사용자 지정 스타일 */
+        .carousel {
+            height: 100%;
+        }
+
+        /* 고정된 푸터 스타일 */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #body-wrapper {
+            min-height: 100%;
+            position: relative;
+        }
+
+        #body-content {
+            /* margin-top: 100px;
+            padding-bottom: 500px; */
+            /* footer의 높이 */
+        }
+
+        footer {
+            /* padding-top: 1000px; */
+            /* width: 100%;
+            height: 500px; */
+            /* footer의 높이 */
+            /* position: absolute;
+            bottom: 0;
+            left: 0; */
+        }
     </style>
 
 
@@ -64,142 +112,239 @@
         crossorigin="anonymous"></script>
 
 
+
+
 </head>
 
 <body>
+    <div id="body-wrapper">
 
-    <h1 class="visually-hidden">Headers examples</h1>
+        <h1 class="visually-hidden">Headers examples</h1>
 
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-                <span class="fs-4">eunsaem's Final Page</span>
-            </a>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                    <span class="fs-4">eunsaem's Final Page</span>
+                </a>
 
-            <ul class="nav nav-pills">
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-                  </form>
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" onclick="location.href = 'add.html'" class="nav-link">Add</a></li>
-            </ul>
-        </header>
-    </div>
+                <ul class="nav nav-pills">
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="#" onclick="location.href = 'add.html'" class="nav-link">Add</a></li>
+                </ul>
+            </header>
+        </div>
 
-    <div class="row">
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+        <div id="body-content">
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+            <div 가로3등분>
+                <div class="parent"
+                    style="margin-left: 190px; margin-top: 150px; margin-bottom: 280px; width: 1300px; height: 100px; background: #585858;">
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                <div class="parent"
+                    style="margin-left: 190px; margin-top: 150px; margin-bottom: 280px; width: 1300px; height: 100px; background: #585858;">
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                <div class="parent"
+                    style="margin-left: 190px; margin-top: 150px; margin-bottom: 280px; width: 1300px; height: 100px; background: #585858;">
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-        <div class="col-lg-4" style="padding: 100px;">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
-            </svg>
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
 
-            <h2 style="padding-left: 25px;">이은샘</h2>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
 
-    </div><!-- /.row -->
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
 
-    
+                <div class="parent"
+                    style="margin-left: 190px; margin-top: 150px; margin-bottom: 280px; width: 1300px; height: 100px; background: #585858;">
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
+
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
+
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
+
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
+
+                    <div class="child" style="background: white;">
+                        <div style="margin-left: 150px;">
+                            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" role="img"
+                                aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <image xlink:href="IMG_9194.jpg" width="100%" height="100%" />
+                            </svg>
+
+                            <h2 style="margin:10px; margin-left:25px;">이은샘</h2>
+                            <p><a class="btn btn-secondary" href="#" onclick="location.href='view.html';">View details
+                                    &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <footer class="text-muted py-5">
+                <div class="container">
+                    <p class="float-end mb-1">
+                        <a href="#">Back to top</a>
+                    </p>
+                    <p class="mb-1">Made by &copy; Eunsaem Lee, 22200565
+                    </p>
+                    <p class="mb-0">More about Eunsaem's project2, <a href="/">Visit the index.html</a>
+                </div>
+            </footer>
+
+
+            <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+
+        </div>
 
 </body>
+
+</html>
