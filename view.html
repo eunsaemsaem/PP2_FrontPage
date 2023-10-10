@@ -128,7 +128,26 @@
         .btn-3 span:hover:after {
             width: 100%;
         }
+
+        /*버튼 나란히*/
+        .find-btn {
+            text-align: center;
+        }
+
+        #find-btn1 {
+            display: inline-block;
+        }
     </style>
+
+    <script>
+        function deleteb() {
+            if (!confirm("정보를 삭제하시겠습니까?")) {
+                alert("취소되었습니다.");
+            } else {
+                alert("삭제되었습니다.");
+            }
+        }
+    </script>
 
 </head>
 
@@ -187,22 +206,32 @@
             <p>Address : 포항 북구 흥해읍 한동대학교</p><br>
             <p>MBTI : ISFJ</p><br>
         </div>
-    </div><br>
-
-
-
-
-    <div 버튼>
-
-        <button class="custom-btn btn-3" onclick="location.href = 'edit.html'"><span>Edit</span></button><br>
-
     </div><br><br>
 
 
-    <!-- <br>
-    <button onclick="location.href = 'edit.html'">edit</button>
-    <a class="btn-gradient red small">edit</a> -->
+    <div class="fine-btn">
+        <button id="find-btn1" class="custom-btn btn-3"
+            onclick="location.href = 'edit.html'"><span>Edit</span></button><br><br>
+        <button id="find-btn1" class="custom-btn btn-3" onclick="deleteb();"><span>Delete</span></button><br>
+    </div><br><br>
 
+    <div>
+        <footer class="text-muted py-5">
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+                <p class="mb-1">Made by &copy; Eunsaem Lee, 22200565
+                </p>
+                <p class="mb-0">More about Eunsaem's project2, <a href="/">Visit the index.html</a>
+            </div>
+        </footer>
+
+
+        <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    </div>
 
 
 </body>

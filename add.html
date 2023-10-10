@@ -4,31 +4,126 @@
 <head>
     <style>
 
-        #sbutton {
-            width: 1320px;
-            height: 70px;
+button {
+            margin-left: 760px;
+            padding-left: 200px;
         }
+
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+        }
+
+        /* 3 */
+        .btn-3 {
+            background: rgb(0, 172, 238);
+            background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+            width: 430px;
+            height: 40px;
+            line-height: 42px;
+            padding: 0;
+            margin-left: 480px;
+            border: none;
+
+        }
+
+        .btn-3 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-3:before,
+        .btn-3:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            background: rgba(2, 126, 251, 1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-3:before {
+            height: 0%;
+            width: 2px;
+        }
+
+        .btn-3:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-3:hover {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .btn-3:hover:before {
+            height: 100%;
+        }
+
+        .btn-3:hover:after {
+            width: 100%;
+        }
+
+        .btn-3 span:hover {
+            color: rgba(2, 126, 251, 1);
+        }
+
+        .btn-3 span:before,
+        .btn-3 span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            background: rgba(2, 126, 251, 1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-3 span:before {
+            width: 2px;
+            height: 0%;
+        }
+
+        .btn-3 span:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-3 span:hover:before {
+            height: 100%;
+        }
+
+        .btn-3 span:hover:after {
+            width: 100%;
+        }
+
 
         * {
             box-sizing: border-box;
         }
-
-        /* input[type=text],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: vertical;
-        } */
 
         label {
             padding: 12px 12px 12px 0;
             display: inline-block;
         }
 
-        input[type=submit] {
+        /* input[type=submit] {
             background-color: #04AA6D;
             color: white;
             padding: 12px 20px;
@@ -40,7 +135,7 @@
 
         input[type=submit]:hover {
             background-color: #45a049;
-        }
+        } */
 
         .container {
             border-radius: 5px;
@@ -190,10 +285,8 @@
         </header>
     </div>
 
-    <h2 style="padding-left: 180px;">Responsive Form</h2>
-    <p style="padding-left: 180px;">Resize the browser window to see the effect. When the screen is less than 600px
-        wide, make the two columns stack
-        on top of each other instead of next to each other.</p><br>
+    <h2 style="padding-left: 180px;">Add New Information</h2>
+    <p style="padding-left: 180px;">Please enter the information according to the requirements below and add new information.</p><br>
 
     <div class="container">
 
@@ -294,10 +387,10 @@
             </div><br>
 
 
-            <br>
-            <div id="sbutton">
-                <input type="button" value="Submit" onclick="checkValue();">
-            </div>
+            <br><br><br><br>
+            <div 버튼>
+                <button class="custom-btn btn-3"><span>Submit</span></button><br>
+            </div><br><br>
         </form>
     </div>
 
