@@ -3,8 +3,7 @@
 
 <head>
     <style>
-
-button {
+        button {
             margin-left: 760px;
             padding-left: 200px;
         }
@@ -228,10 +227,14 @@ button {
                 return;
             }
 
-            alert("정보를 수정하였습니다.");
-            // document.form1.submit();
-            // location.href = 'list.html';
-            <a href="https://eunsaem-pp2-final.netlify.app/list.html"></a>
+            
+            if (!confirm("정보를 수정하시겠습니까?")) {
+                alert("취소되었습니다.");
+            } else {
+                alert("수정되었습니다.");
+                location.href = 'list.html';
+            }
+        
         }
     </script>
 
@@ -275,7 +278,8 @@ button {
     </div><br>
 
     <h2 style="padding-left: 180px;">Edit Information</h2>
-    <p style="padding-left: 180px;">Please enter the information according to the requirements below and edit information.</p><br>
+    <p style="padding-left: 180px;">Please enter the information according to the requirements below and edit
+        information.</p><br>
 
     <div class="container">
 
@@ -306,7 +310,7 @@ button {
             </div><br><br><br>
 
             <div>
-                <label for="gender" style="font-weight: bold;">Gender     </label>
+                <label for="gender" style="font-weight: bold;">Gender </label>
                 <input type="radio" id="female" name="gender" checked="checked">
                 <label for="female">Female</label>
                 <input type="radio" id="male" name="gender">
@@ -327,7 +331,8 @@ button {
                     <lable for="phone" style="font-weight: bold;">Phone number</lable>
                 </div>
                 <div>
-                    <input type="text" size="3" name="pnum1" value="010"> - <input type="text" size="4" name="pnum2" value="1357"> - <input type="text" size="5" name="pnum3" value="2468">
+                    <input type="text" size="3" name="pnum1" value="010"> - <input type="text" size="4" name="pnum2"
+                        value="1357"> - <input type="text" size="5" name="pnum3" value="2468">
                 </div>
             </div><br><br>
 
@@ -336,7 +341,8 @@ button {
                     <label for="email" style="font-weight: bold;">E-mail</label>
                 </div>
                 <div>
-                    <input type="text" size="15" name="email1" value="eunsaem38"> @ <input type="text" size="15" name="email2" value="handong.ac.kr">
+                    <input type="text" size="15" name="email1" value="eunsaem38"> @ <input type="text" size="15"
+                        name="email2" value="handong.ac.kr">
                 </div>
             </div><br><br>
 
